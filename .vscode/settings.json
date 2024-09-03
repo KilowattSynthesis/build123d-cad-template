@@ -6,5 +6,9 @@
         "editor.defaultFormatter": "charliermarsh.ruff",
         "python.languageServer": "Pylance",
         "python.analysis.typeCheckingMode": "basic",
+    },
+    "[yaml]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2
     }
 }
