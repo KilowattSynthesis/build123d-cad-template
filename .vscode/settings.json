@@ -1,4 +1,10 @@
 {
+	"files.exclude": {
+		"**/__pycache__": true,
+		"**/.ruff_cache": true,
+		"venv": true,
+	},
+
     "[python]": {
         "editor.formatOnSave": true,
         "editor.tabSize": 4,
@@ -10,5 +16,6 @@
     "[yaml]": {
         "editor.insertSpaces": true,
         "editor.tabSize": 2
-    }
+    },
+
 }
