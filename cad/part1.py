@@ -21,20 +21,22 @@ else:
         return args[0]
 
 
-# Constants
+# region Constants
+# ADD CONSTANTS HERE
+# end region
 
 
-def validate():
+def validate() -> None:
     """Raise if variables are not valid."""
     pass
 
 
-def make_part1():
-    # Orientation: ...
-    with bd.BuildPart() as part1:
-        bd.Cylinder(radius=20, height=20)
+def make_part1() -> bd.Part:
+    p = bd.Part()
 
-    return part1.part
+    p += bd.Cylinder(radius=20, height=20)
+
+    return p
 
 
 if __name__ == "__main__":
