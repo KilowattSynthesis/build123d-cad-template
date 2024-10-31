@@ -3,9 +3,13 @@ target-version = "py311"
 line-length = 79
 
 [lint]
-# select = []
+select = ["ALL"]
 ignore = [
-    
+    "ERA100", # Commented out code.
+    "S101",  # Use of `assert` statement.
+    "RET504",  # Assignment right before return.
+    "COM812", # Missing comma at the end of a function call. Bad in show() call.
+    "D100", # Missing docstring in public module.
 ]
 
 # Allow fix for all enabled rules (when `--fix`) is provided.

@@ -2,9 +2,7 @@ import os
 from pathlib import Path
 
 import build123d as bd
-
 from loguru import logger
-
 
 if os.getenv("CI"):
 
@@ -43,15 +41,12 @@ if __name__ == "__main__":
     validate()
 
     parts = {
-        "part1": make_part1(),
+        "part1": show(make_part1()),
     }
 
     logger.info("Showing CAD model(s)")
-    show(parts["part1"])
 
-    (export_folder := Path(__file__).parent.with_name("build")).mkdir(
-        exist_ok=True
-    )
+    (export_folder := Path(__file__).parent.with_name("build")).mkdir(exist_ok=True)
     for name, part in parts.items():
         assert isinstance(part, bd.Part), f"{name} is not a Part"
         # assert part.is_manifold is True, f"{name} is not manifold"
