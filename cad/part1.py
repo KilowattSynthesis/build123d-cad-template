@@ -26,10 +26,10 @@ else:
 
 def validate() -> None:
     """Raise if variables are not valid."""
-    pass
 
 
 def make_part1() -> bd.Part:
+    """Create a CAD model of part1."""
     p = bd.Part()
 
     p += bd.Cylinder(radius=20, height=20)
@@ -46,7 +46,9 @@ if __name__ == "__main__":
 
     logger.info("Showing CAD model(s)")
 
-    (export_folder := Path(__file__).parent.with_name("build")).mkdir(exist_ok=True)
+    (export_folder := Path(__file__).parent.with_name("build")).mkdir(
+        exist_ok=True
+    )
     for name, part in parts.items():
         assert isinstance(part, bd.Part), f"{name} is not a Part"
         # assert part.is_manifold is True, f"{name} is not manifold"
