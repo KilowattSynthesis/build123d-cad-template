@@ -1,47 +1,34 @@
-import os
+from dataclasses import dataclass
 from pathlib import Path
 
 import build123d as bd
+from build123d_ease import show
 from loguru import logger
 
-if os.getenv("CI"):
 
-    def show(*args: object) -> bd.Part:
-        """Do nothing (dummy function) to skip showing the CAD model in CI."""
-        logger.info(f"Skipping show({args}) in CI")
-        return args[0]
-else:
-    import ocp_vscode
+@dataclass
+class Part1Spec:
+    """Specification for part1."""
 
-    def show(*args: object) -> bd.Part:
-        """Show the CAD model in the CAD viewer."""
-        ocp_vscode.show(*args)
-        return args[0]
+    part1_radius: float = 20
+
+    def __post_init__(self) -> None:
+        """Post initialization checks."""
+        assert self.part1_radius > 0, "part1_radius must be positive"
 
 
-# region Constants
-# ADD CONSTANTS HERE
-# end region
-
-
-def validate() -> None:
-    """Raise if variables are not valid."""
-
-
-def make_part1() -> bd.Part:
+def make_part1(spec: Part1Spec) -> bd.Part:
     """Create a CAD model of part1."""
     p = bd.Part()
 
-    p += bd.Cylinder(radius=20, height=20)
+    p += bd.Cylinder(radius=spec.part1_radius, height=20)
 
     return p
 
 
 if __name__ == "__main__":
-    validate()
-
     parts = {
-        "part1": show(make_part1()),
+        "part1": show(make_part1(Part1Spec())),
     }
 
     logger.info("Showing CAD model(s)")
