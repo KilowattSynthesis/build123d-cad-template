@@ -19,7 +19,7 @@ class Part1Spec:
 
 def make_part1(spec: Part1Spec) -> bd.Part:
     """Create a CAD model of part1."""
-    p = bd.Part()
+    p = bd.Part(None)
 
     p += bd.Cylinder(radius=spec.part1_radius, height=20)
 
