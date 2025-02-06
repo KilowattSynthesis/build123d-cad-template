@@ -17,7 +17,7 @@ class Part1Spec:
         assert self.part1_radius > 0, "part1_radius must be positive"
 
 
-def make_part1(spec: Part1Spec) -> bd.Part:
+def make_part1(spec: Part1Spec) -> bd.Part | bd.Compound:
     """Create a CAD model of part1."""
     p = bd.Part(None)
 
@@ -37,9 +37,9 @@ if __name__ == "__main__":
         exist_ok=True
     )
     for name, part in parts.items():
-        assert isinstance(
-            part, bd.Part | bd.Solid | bd.Compound
-        ), f"{name} is not an expected type ({type(part)})"
+        assert isinstance(part, bd.Part | bd.Solid | bd.Compound), (
+            f"{name} is not an expected type ({type(part)})"
+        )
         if not part.is_manifold:
             logger.warning(f"Part '{name}' is not manifold")
 
