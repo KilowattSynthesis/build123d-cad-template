@@ -1,6 +1,7 @@
 name: Lint, Run Scripts, and Publish Release on Tag
 
 on:
+  workflow_dispatch:
   push:
     tags:
       - "v*"  # Only trigger on tags that start with "v"

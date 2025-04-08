@@ -1,6 +1,8 @@
 name: Lint, Type Check, and Run Python Code
 
-on: [push]
+on:
+  workflow_dispatch:
+  push:
 
 jobs:
   lint-with-ruff:
