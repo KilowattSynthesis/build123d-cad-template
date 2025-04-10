@@ -12,6 +12,8 @@ ignore = [
     "RET504",  # Assignment right before return.
     "COM812", # Missing comma at the end of a function call. Bad in show() call.
     "D100", # Missing docstring in public module.
+    "TD003", # Ignore: Consider fixing the TODO. Obviously I'm gonna fix it.
+    "FIX002", # Ignore: TODOs must have associated issues.
 ]
 
 # Allow fix for all enabled rules (when `--fix`) is provided.
