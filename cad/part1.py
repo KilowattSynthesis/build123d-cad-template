@@ -41,7 +41,7 @@ if __name__ == "__main__":
             f"{name} is not an expected type ({type(part)})"
         )
         if not part.is_manifold:
-            logger.warning(f"Part '{name}' is not manifold")
+            logger.warning(f'Part "{name}" is not manifold')
 
         bd.export_stl(part, str(export_folder / f"{name}.stl"))
         bd.export_step(part, str(export_folder / f"{name}.step"))
