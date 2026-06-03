@@ -18,11 +18,6 @@ dev = [
     "ruff>=0.12.8",
 ]
 
-[tool.uv]
-required-environments = [
-    "sys_platform == 'linux' and platform_machine == 'x86_64'"
-]
-
 [tool.pyright]
 typeCheckingMode = "basic"
 
