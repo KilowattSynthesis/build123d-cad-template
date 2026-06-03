@@ -98,10 +98,10 @@ dependencies = [
     { name = "bd-warehouse" },
     { name = "build123d" },
     { name = "build123d-ease" },
-    { name = "gggears" },
     { name = "gitpython" },
     { name = "loguru" },
     { name = "ocp-vscode" },
+    { name = "py-gearworks" },
 ]
 
 [package.dev-dependencies]
@@ -115,10 +115,10 @@ requires-dist = [
     { name = "bd-warehouse", git = "https://github.com/gumyr/bd_warehouse?rev=b7e0dbe87e76244282651e903f6f55257a298219" },
     { name = "build123d", specifier = "==0.9.1" },
     { name = "build123d-ease", specifier = "==0.2.1" },
-    { name = "gggears", git = "https://github.com/GarryBGoode/gggears.git" },
     { name = "gitpython" },
     { name = "loguru" },
     { name = "ocp-vscode" },
+    { name = "py-gearworks", git = "https://github.com/GarryBGoode/py_gearworks" },
 ]
 
 [package.metadata.requires-dev]
@@ -479,11 +479,6 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/a0/ee/f626cd372932d828508137a79b85167fdcf3adab2e3bed433f295c596c6a/fonttools-4.59.0-cp313-cp313-win_amd64.whl", hash = "sha256:26731739daa23b872643f0e4072d5939960237d540c35c14e6a06d47d71ca8fe", size = 2248560, upload-time = "2025-07-16T12:04:36.034Z" },
     { url = "https://files.pythonhosted.org/packages/d0/9c/df0ef2c51845a13043e5088f7bb988ca6cd5bb82d5d4203d6a158aa58cf2/fonttools-4.59.0-py3-none-any.whl", hash = "sha256:241313683afd3baacb32a6bd124d0bce7404bc5280e12e291bae1b9bba28711d", size = 1128050, upload-time = "2025-07-16T12:04:52.687Z" },
 ]
-
-[[package]]
-name = "gggears"
-version = "0.0.11"
-source = { git = "https://github.com/GarryBGoode/gggears.git#78020405b43e38fc67c60100a3da15b7675f1d57" }
 
 [[package]]
 name = "gitdb"
@@ -1187,6 +1182,16 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/cd/05/0a34433a064256a578f1783a10da6df098ceaa4a57bbeaa96a6c0352786b/pure_eval-0.2.3.tar.gz", hash = "sha256:5f4e983f40564c576c7c8635ae88db5956bb2229d7e9237d03b3c0b0190eaf42", size = 19752, upload-time = "2024-07-21T12:58:21.801Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/8e/37/efad0257dc6e593a18957422533ff0f87ede7c9c6ea010a2177d738fb82f/pure_eval-0.2.3-py3-none-any.whl", hash = "sha256:1db8e35b67b3d218d818ae653e27f06c3aa420901fa7b081ca98cbedc874e0d0", size = 11842, upload-time = "2024-07-21T12:58:20.04Z" },
+]
+
+[[package]]
+name = "py-gearworks"
+version = "0.0.18"
+source = { git = "https://github.com/GarryBGoode/py_gearworks#2fc2a13d82a9997a65f30c870498f0bb3be62318" }
+dependencies = [
+    { name = "build123d" },
+    { name = "numpy" },
+    { name = "scipy" },
 ]
 
 [[package]]

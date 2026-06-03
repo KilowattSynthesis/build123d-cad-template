@@ -8,7 +8,7 @@ dependencies = [
     "ocp_vscode",
     "bd_warehouse @ git+https://github.com/gumyr/bd_warehouse@b7e0dbe87e76244282651e903f6f55257a298219",
     "build123d-ease==0.2.1",
-    "gggears @ git+https://github.com/GarryBGoode/gggears.git",
+    "py_gearworks @ git+https://github.com/GarryBGoode/py_gearworks",
 ]
 requires-python = ">=3.12"
 
