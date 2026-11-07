@@ -3,7 +3,6 @@ name = "cad"
 version = "0.1.0"
 dependencies = [
     "loguru",
-    "GitPython",
     "build123d==0.13.0",
     "ocp_vscode",
     "bd_warehouse @ git+https://github.com/gumyr/bd_warehouse@fcf23c7991c3f7fa6f28c59cda7276825f84c9bc",
